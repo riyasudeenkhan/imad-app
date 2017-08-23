@@ -5,17 +5,43 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-  title : "Riyasudeenkhan Artical One",
-  heading : "Article One",
-  date : "Aug 23, 2017",
-  content : `
-        <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
-        <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
-        <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
-        <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
-        <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
-  `
+var articles = {
+    'article-one': {
+        title: 'Riyasudeenkhan Artical One',
+        heading: 'Article One',
+        date: 'Aug 23, 2017',
+        content: `
+            <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
+            <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
+            <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
+            <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
+            <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
+        `
+    },
+    'article-two': {
+        title : "Riyasudeenkhan Artical Two",
+        heading : "Article Two",
+        date : "Aug 23, 2017",
+        content : `
+            <p>This is my first practical session and here I am creating Web Page for Artical Two.</p>
+            <p>This is my first practical session and here I am creating Web Page for Artical Two.</p>
+            <p>This is my first practical session and here I am creating Web Page for Artical Two.</p>
+            <p>This is my first practical session and here I am creating Web Page for Artical Two.</p>
+            <p>This is my first practical session and here I am creating Web Page for Artical Two.</p>
+        `
+    },
+    'article-three': {
+        title : "Riyasudeenkhan Artical Three",
+        heading : "Article Three",
+        date : "Aug 23, 2017",
+        content : `
+            <p>This is my first practical session and here I am creating Web Page for Artical Three.</p>
+            <p>This is my first practical session and here I am creating Web Page for Artical Three.</p>
+            <p>This is my first practical session and here I am creating Web Page for Artical Three.</p>
+            <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
+            <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
+        `
+    }
 };
 
 function createTemplate(data){
@@ -57,16 +83,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articleOne));
-});
-
-app.get('/article-two', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/article-three', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+app.get('/:articleName', function (req, res) {
+    //articleName = article-one
+    //articles[articleName] = {} create object for article-one
+    articleName = req.params.articleName;
+  res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
