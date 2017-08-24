@@ -11,11 +11,7 @@ var articles = {
         heading: 'Article One',
         date: 'Aug 23, 2017',
         content: `
-            <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
-            <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
-            <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
-            <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
-            <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
+            <p>This is my first practical session and here I am creating Web Page for Artical One.This is my first practical session and here I am creating Web Page for Artical One.This is my first practical session and here I am creating Web Page for Artical One.This is my first practical session and here I am creating Web Page for Artical One.This is my first practical session and here I am creating Web Page for Artical One.This is my first practical session and here I am creating Web Page for Artical One.This is my first practical session and here I am creating Web Page for Artical One.This is my first practical session and here I am creating Web Page for Artical One.</p>
         `
     },
     'article-two': {
@@ -23,9 +19,6 @@ var articles = {
         heading : "Article Two",
         date : "Aug 23, 2017",
         content : `
-            <p>This is my first practical session and here I am creating Web Page for Artical Two.</p>
-            <p>This is my first practical session and here I am creating Web Page for Artical Two.</p>
-            <p>This is my first practical session and here I am creating Web Page for Artical Two.</p>
             <p>This is my first practical session and here I am creating Web Page for Artical Two.</p>
             <p>This is my first practical session and here I am creating Web Page for Artical Two.</p>
         `
@@ -38,8 +31,6 @@ var articles = {
             <p>This is my first practical session and here I am creating Web Page for Artical Three.</p>
             <p>This is my first practical session and here I am creating Web Page for Artical Three.</p>
             <p>This is my first practical session and here I am creating Web Page for Artical Three.</p>
-            <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
-            <p>This is my first practical session and here I am creating Web Page for Artical One.</p>
         `
     }
 };
