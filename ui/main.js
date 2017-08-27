@@ -1,21 +1,21 @@
 console.log('Loaded!');
 
 var button = document.getElementById("counter");
-var counter=0;
 
-xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        // Typical action to be performed when the document is ready:
-        var count=document.getElementById("count");
-        count.innerHTML=xhttp.responseText;
-    }
-};
+
 
 button.onclick = function(){
-    counter=counter+1;
-    var count=document.getElementById("count");
-    count.innerHTML=counter.toString();
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // Typical action to be performed when the document is ready:
+            var count=document.getElementById("count");
+            count.innerHTML=xhttp.responseText;
+        }
+    };
+    
+    xhttp.open("GET", "http://riyasudeenkhan.imad.hasura-app.io/counter", true);
+    xhttp.send();
 };
 
 // var element=document.getElementById('content');
