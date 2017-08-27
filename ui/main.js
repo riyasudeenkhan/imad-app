@@ -3,9 +3,11 @@ console.log('Loaded!');
 var button = document.getElementById("counter");
 var counter=0;
 
-counter=counter+1;
-var span=document.getElementById("count");
-span.innerHTML=counter.toString();
+button.onclick = function(){
+    counter=counter+1;
+    var count=document.getElementById("count");
+    count.innerHTML=counter.toString();
+};
 
 // var element=document.getElementById('content');
 
