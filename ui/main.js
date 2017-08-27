@@ -23,4 +23,4 @@ button.onclick = function(){
 
 // img.onclick = function() {
 //     var interval = setInterval(moveRight, 50);
-}
+//}
